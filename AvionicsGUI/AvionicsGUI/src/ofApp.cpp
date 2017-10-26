@@ -1,13 +1,21 @@
 #include "ofApp.h"
-
+int const dataCount = 5;
 
 //--------------------------------------------------------------
 void ofApp::setup(){
 	ofBackground(0, 0, 0);
-	testBox.set(300, 200, 500, 500, 30, 30, 30);
-	testBox.setOpen(true);
-	testBox.setName("Name");
-	testBox.loadFont("Exo-Light.otf", 30);	
+
+	data = new DataBox[dataCount];
+
+	/*initialize all data boxes*/
+	string dataNames[5] = { "Position", "Velocity", "Acceleration", "Altitude", "Temperature" };
+	for (int i = 0; i < dataCount; i++)
+	{
+		data[i].set(200, 100, 25, 105*(i+1), 30, 30, 30);	//load to the left side
+		data[i].setOpen(true);
+		data[i].setName(dataNames[i]);
+		data[i].loadFont("Exo-Light.otf", 20);
+	}
 }
 
 //--------------------------------------------------------------
@@ -17,7 +25,10 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-	testBox.draw();
+	for (int i = 0; i < dataCount; i++)
+	{
+		data[i].draw();
+	}
 }
 
 //--------------------------------------------------------------
