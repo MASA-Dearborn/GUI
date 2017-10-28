@@ -10,6 +10,12 @@
     <ClCompile Include="src\DataBox.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="src\Box.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ButtonBox.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="src">
@@ -24,6 +30,12 @@
       <Filter>src</Filter>
     </ClInclude>
     <ClInclude Include="src\DataBox.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Box.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ButtonBox.h">
       <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>

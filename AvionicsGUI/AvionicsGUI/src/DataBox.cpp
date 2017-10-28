@@ -19,16 +19,7 @@ void DataBox::set(float _x, float _y, float _px, float _py, double _dx, double _
 	color = ofColor(150, 150, 150);
 }
 
-void DataBox::setName(string _name)
-{
-	name = _name;
-}
-
-void DataBox::setOpen(bool _val)
-{
-	isOpen = _val;
-}
-
+  
 void DataBox::loadFont(const string &filename, int fontsize)
 {
 	int offset = fontsize / 2;
@@ -47,13 +38,9 @@ void DataBox::setData(double _dx, double _dy, double _dz)
 
 void DataBox::draw()
 {
-	ofSetColor(color);
-	ofDrawRectangle(shape);
-	ofSetColor(ofColor(255,255,0));
-	/*Set Label*/
+	drawBox();
 	float xCenter = (shape.width - label.stringWidth(name)) / 2;	//offset by leftover spaces
 	float yOffset = (shape.height / 5) + 3;
-	label.drawString(name, shape.x+xCenter, shape.y+yOffset);
 	/*Set Data Label
 		Positions are partially hardcoded
 		FIX!!!							*/

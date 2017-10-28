@@ -23,6 +23,9 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
 
+		int mouseX, mouseY;
+
 		DataBox *data;
 		DataBox testBox;
+		ofSerial serial; 
 };

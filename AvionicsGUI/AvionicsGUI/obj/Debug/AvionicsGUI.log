@@ -1,8 +1,4 @@
-﻿  DataBox.cpp
-  main.cpp
-  ofApp.cpp
-     Creating library bin\AvionicsGUI_debug.lib and object bin\AvionicsGUI_debug.exp
-  AvionicsGUI.vcxproj -> E:\Users\Josh\Documents\GitHub\GUI\AvionicsGUI\AvionicsGUI\bin\AvionicsGUI_debug.exe
+﻿  AvionicsGUI.vcxproj -> E:\Users\Josh\Documents\GitHub\GUI\AvionicsGUI\AvionicsGUI\bin\AvionicsGUI_debug.exe
   AvionicsGUI.vcxproj -> bin\AvionicsGUI_debug.pdb (Full PDB)
   
   	                   9	E:\Users\Josh\Documents\Programming\of_v0.9.8_vs_release\export\vs\Win32\
