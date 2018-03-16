@@ -1,13 +1,13 @@
 #pragma once
 #include "Box.h"
 
-class ButtonBox
+class ButtonBox: public Box
 {
 public:
 	ButtonBox();
 	~ButtonBox();
 
-	void clicked(int x, int y);
+	void clicked(int _x, int _y);
 
 protected:
 

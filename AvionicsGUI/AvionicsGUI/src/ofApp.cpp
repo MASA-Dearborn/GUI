@@ -6,6 +6,7 @@ void ofApp::setup(){
 	ofBackground(0, 0, 0);
 
 	data = new DataBox[dataCount];
+	data_Button = new ButtonBox[dataCount];
 
 	/*initialize all data boxes*/
 	string dataNames[5] = { "Position", "Velocity", "Acceleration", "Altitude", "Temperature" };
@@ -15,6 +16,15 @@ void ofApp::setup(){
 		data[i].setOpen(true);
 		data[i].setName(dataNames[i]);
 		data[i].loadFont("Exo-Light.otf", 20);
+	}
+
+	for (int i = 0; i < dataCount; i++)
+	{
+		data_Button[i].setBox(0, i*55, 200, 50);
+		data_Button[i].setOpen(true);
+		data_Button[i].setColor(0, 0, 255);
+		data_Button[i].setName(dataNames[i]);
+		data_Button[i].loadFont("Exo-Light.otf", 20);
 	}
 	serial.setup("COM4", 9600);
 }
@@ -32,6 +42,7 @@ void ofApp::draw(){
 	for (int i = 0; i < dataCount; i++)
 	{
 		data[i].draw();
+		data_Button[i].drawBox();
 	}
 }
 
@@ -63,7 +74,8 @@ void ofApp::mousePressed(int x, int y, int button){
 
 //--------------------------------------------------------------
 void ofApp::mouseReleased(int x, int y, int button){
-
+	mouseX = x;
+	mouseY = y;
 }
 
 //--------------------------------------------------------------

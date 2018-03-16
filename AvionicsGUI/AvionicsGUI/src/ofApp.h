@@ -3,6 +3,7 @@
 #include "ofMain.h"
 #include <string>
 #include "DataBox.h"
+#include "ButtonBox.h"
 
 class ofApp : public ofBaseApp{
 
@@ -25,7 +26,7 @@ class ofApp : public ofBaseApp{
 
 		int mouseX, mouseY;
 
-		DataBox *data;
-		DataBox testBox;
+		DataBox *data, testBox;
+		ButtonBox *data_Button;
 		ofSerial serial; 
 };

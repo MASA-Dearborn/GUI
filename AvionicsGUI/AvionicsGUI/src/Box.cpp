@@ -20,7 +20,15 @@ void Box::loadFont(const string &filename, int fontsize)
 	int offset = fontsize / 2;
 	label.loadFont(filename, fontsize);
 }
+void Box::setBox(float _x, float _y, float _px, float _py)
+{
+	shape.set(_x, _y, _px, _py);
+}
 
+void Box::setColor(int _r, int _g, int _b)
+{
+	color.set(_r, _g, _b);
+}
 
 void Box::drawBox()
 {
